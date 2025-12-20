@@ -1,14 +1,20 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
-int main() {
-    cout << "Traffic generator starting..." << endl;
-    return 0;
+string generateVehicleID() {
+    string id = "";
+    id += char('A' + rand() % 26);
+    id += char('A' + rand() % 26);
+    id += char('0' + rand() % 10);
+    return id;
 }
-#include <iostream>
-using namespace std;
 
 int main() {
-    cout << "Traffic generator starting..." << endl;
+    srand(time(0));
+    cout << generateVehicleID() << endl;
     return 0;
 }
+
+
