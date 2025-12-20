@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/DELL/Desktop/dsa-queue-simulator-project",
-      "program": "c:/Users/DELL/Desktop/dsa-queue-simulator-project/build/Debug/outDebug",
+      "cwd": "c:/Users/DELL/Desktop/dsa-queue-simulator-project/src",
+      "program": "c:/Users/DELL/Desktop/dsa-queue-simulator-project/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
