@@ -27,8 +27,17 @@ string generateLane() {
 
 int main() {
    ofstream file("data/vehicles.data", ios::app);
-if(!file){
+if(!file)
+{
     cout << "Error opening file!" << endl;
+    while(true) {
+    string v = generateVehicleID();
+    string l = generateLane();
+    file << v << ":" << l << endl;
+    cout << "Generated " << v << " in " << l << endl;
+    sleep(1);
+}
+
     return 1;
 }
 
