@@ -28,6 +28,14 @@ void loadVehicles()
 
 
 int main() {
+    loadVehicles();
+cout << "Vehicles in AL2: " << AL2.size() << endl;
+
+if(!AL2.empty()) {
+    cout << "Serving " << AL2.front() << endl;
+    AL2.pop();
+}
+
     cout << "Simulator started" << endl;
     return 0;
 }
