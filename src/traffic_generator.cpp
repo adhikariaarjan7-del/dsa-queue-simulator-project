@@ -1,9 +1,17 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
+#include <unistd.h>
+
 using namespace std;
 
-string generateVehicleID() {
+/*
+ This function creates a random vehicle ID
+ Example: AB3
+*/
+string generateVehicleID()
+{
     string id = "";
     id += char('A' + rand() % 26);
     id += char('A' + rand() % 26);
@@ -11,10 +19,51 @@ string generateVehicleID() {
     return id;
 }
 
-int main() {
-    srand(time(0));
-    cout << generateVehicleID() << endl;
-    return 0;
+/*
+ This function selects a random road and lane
+ Only roads A, B, C, D
+ Example: AL1, BL2, CL3
+*/
+string generateLane()
+{
+    char roads[] = {'A', 'B', 'C', 'D'};
+    int lane = rand() % 3 + 1;   // Lane 1 to 3
+
+    string laneID = "";
+    laneID += roads[rand() % 4];
+    laneID += "L";
+    laneID += char('0' + lane);
+
+    return laneID;
 }
 
+int main()
+{
+    srand((unsigned int)time(NULL));
 
+    // Open file in append mode
+    ofstream file("data/vehicles.data", ios::app);
+
+    if (!file)
+    {
+        cout << "Error opening file!" << endl;
+        return 1;
+    }
+
+    cout << "Traffic generator started..." << endl;
+
+    // Generate vehicles continuously
+    while (true)
+    {
+        string vehicle = generateVehicleID();
+        string lane = generateLane();
+
+        file << vehicle << ":" << lane << endl;
+        cout << "Generated: " << vehicle << " in " << lane << endl;
+
+        sleep(1); // wait 1 second
+    }
+
+    file.close();
+    return 0;
+}
