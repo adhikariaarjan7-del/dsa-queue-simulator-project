@@ -26,7 +26,6 @@ string generateVehicleID() {
 string generateLane() {
     char roads[] = {'A', 'B', 'C', 'D'};
     int lane = rand() % 3 + 1; // Lane 1 to 3
-
     string laneID = "";
     laneID += roads[rand() % 4];
     laneID += "L";
