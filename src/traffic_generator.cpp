@@ -2,14 +2,10 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
-#include <unistd.h>
+#include <windows.h>
 
 using namespace std;
 
-/*
- This function creates a random vehicle ID
- Example: AB3
-*/
 string generateVehicleID() {
     string id = "";
     id += char('A' + rand() % 26);
@@ -18,14 +14,10 @@ string generateVehicleID() {
     return id;
 }
 
-/*
- This function selects random road and lane
- Only A, B, C, D roads
- Example: AL1, BL2
-*/
 string generateLane() {
     char roads[] = {'A', 'B', 'C', 'D'};
-    int lane = rand() % 3 + 1; // Lane 1 to 3
+    int lane = rand() % 3 + 1;
+
     string laneID = "";
     laneID += roads[rand() % 4];
     laneID += "L";
@@ -35,12 +27,14 @@ string generateLane() {
 }
 
 int main() {
+    cout << "GENERATOR STARTED FROM HERE" << endl;
+
     srand((unsigned int)time(NULL));
 
-    ofstream file("data/vehicles.data", ios::app);
+   ofstream file("data/vehicles.data", ios::app);
 
     if (!file) {
-        cout << "Error opening file!" << endl;
+        cout << "Error opening vehicles.data!" << endl;
         return 1;
     }
 
@@ -51,11 +45,9 @@ int main() {
         string lane = generateLane();
 
         file << vehicle << ":" << lane << endl;
+        file.flush();
+
         cout << "Generated: " << vehicle << " in " << lane << endl;
-
-        sleep(1); // wait 1 second
+        Sleep(1000);  // 1 second delay
     }
-
-    file.close();
-    return 0;
 }
