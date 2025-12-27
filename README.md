@@ -132,7 +132,8 @@ Queue Data Structure – DSA Lecture Notes
 Open‑source SDL examples
 
 Source Code
-GitHub Repository: https://github.com/adhikariaarjan7/dsa-queue-simulator-project
+GitHub Repository:https://github.com/adhikariaarjan7-del/dsa-queue-simulator-project.git
+
 
  Conclusion
 This project successfully demonstrates how queues and priority logic can be used to manage traffic efficiently.
