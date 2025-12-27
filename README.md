@@ -100,6 +100,8 @@ Screenshots of the output
 <img width="327" height="906" alt="Screenshot 2025-12-27 190934" src="https://github.com/user-attachments/assets/0f48b65e-23e0-4000-9260-c6ba793b315f" />
 <img width="1583" height="952" alt="Screenshot 2025-12-27 191024" src="https://github.com/user-attachments/assets/77da6c2b-efa4-4aa0-bb4d-84d9fe550b4c" />
 <img width="1440" height="907" alt="Screenshot 2025-12-27 191132" src="https://github.com/user-attachments/assets/872aa766-d45e-4259-9132-3fdf61db29b9" />
+<img width="1460" height="917" alt="Screenshot 2025-12-27 141519" src="https://github.com/user-attachments/assets/b39525ce-86e7-4e9f-ba95-d12439a770bc" />
+
 Data Structures Used
 Data Structure	Implementation	Purpose
 Queue	std::queue<string>	Store vehicles per lane (simulator)
@@ -130,10 +132,9 @@ Queue Data Structure – DSA Lecture Notes
 Open‑source SDL examples
 
 Source Code
-GitHub Repository:
-👉 https://github.com/adhikariaarjan7/dsa-queue-simulator-project
+GitHub Repository: https://github.com/adhikariaarjan7/dsa-queue-simulator-project
 
-✅ Conclusion
+ Conclusion
 This project successfully demonstrates how queues and priority logic can be used to manage traffic efficiently.
 The combination of DSA concepts, file handling, and graphical visualization makes this project complete and suitable for academic evaluation.
 
