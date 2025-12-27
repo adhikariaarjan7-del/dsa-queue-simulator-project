@@ -61,7 +61,7 @@ Move faster when light turns green
 
 Priority lane effect is visible graphically
 
-🛠️ Technologies Used
+Technologies Used
 C++
 
 STL Queue (std::queue)
@@ -109,7 +109,7 @@ Queue	std::queue<Vehicle>	Store vehicle objects (visualizer)
 Structure	struct Vehicle	Vehicle ID & position
 Structure	struct TrafficLight	Light state & timing
 File Handling	ifstream / ofstream	Data sharing
-⏱️ Time Complexity Overview
+Time Complexity Overview
 Vehicle generation: O(1)
 
 File reading: O(n)
